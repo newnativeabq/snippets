@@ -2,6 +2,9 @@ from os import path
 import wget
 import logging
 
+name = "snippets_pkg"
+
+
 # create logger for snippes applicaiton
 logger = logging.getLogger('snippets')
 logger.setLevel(logging.DEBUG)

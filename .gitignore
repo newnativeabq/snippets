@@ -1,2 +1,5 @@
 # Incomplete/Experimental files
 wrangle.py
+build/
+dist/
+snippets_vallen.egg-info/

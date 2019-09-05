@@ -2,6 +2,10 @@ from os import path
 import wget
 import logging
 
+# Helper classes
+from archives import ArchiveFactory
+
+
 # Module logger
 logging.getLogger(name='snippets.files')
 
@@ -53,6 +57,10 @@ def DownloadFile(url, name=None, target_dir=None):
             logger('Download failed. Except statement activated.')
     return filename
 
+class Archive(ArchiveFactory):
+    def __init__(self):
+        print('Archive created')
+
 
 def UnzipFile(path, target_dir):
     '''
@@ -64,4 +72,4 @@ def UnzipFile(path, target_dir):
         unpack_archive(path, target_dir)
     except:
         print('error unzipping')
-    
+
